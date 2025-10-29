@@ -1,16 +1,10 @@
-﻿using LFC.BuildingBlocks.Core.Common;
+﻿using LFC.Shared.Core.Common;
 
-namespace LFC.BuildingBlocks.Core.ValueObjects
+namespace LFC.Shared.Core.ValueObjects
 {
     public class Cnpj
     {
         public const int Length = 14;
-        public string Number { get; private set; }
-
-        private Cnpj(string number)
-        {
-            Number = number;
-        }
 
         public static bool IsValid(string cnpj)
         {
@@ -20,14 +14,6 @@ namespace LFC.BuildingBlocks.Core.ValueObjects
                 return false;
 
             return HasValidDigits(digits);
-        }
-
-        public static Cnpj Create(string cnpj)
-        {
-            if (!IsValid(cnpj))
-                throw new ArgumentException("Invalid CNPJ.");
-
-            return new Cnpj(StringUtils.OnlyNumbers(cnpj));
         }
 
         private static bool HasRepeatedDigits(string digits)
@@ -53,7 +39,5 @@ namespace LFC.BuildingBlocks.Core.ValueObjects
 
             return $"{firstDigit}{secondDigit}" == digits.Substring(Length - 2, 2);
         }
-
-        public override string ToString() => Number;
     }
 }

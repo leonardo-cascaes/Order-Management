@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LFC.BuildingBlocks.Core.Common
+namespace LFC.Shared.Core.Common
 {
     public static class StringUtils
     {

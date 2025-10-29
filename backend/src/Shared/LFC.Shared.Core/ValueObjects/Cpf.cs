@@ -1,16 +1,10 @@
-﻿using LFC.BuildingBlocks.Core.Common;
+﻿using LFC.Shared.Core.Common;
 
-namespace LFC.BuildingBlocks.Core.ValueObjects
+namespace LFC.Shared.Core.ValueObjects
 {
     public class Cpf
     {
         public const int Length = 11;
-        public string Number { get; private set; }
-
-        private Cpf(string number)
-        {
-            Number = number;
-        }
 
         public static bool IsValid(string cpf)
         {
@@ -20,14 +14,6 @@ namespace LFC.BuildingBlocks.Core.ValueObjects
                 return false;
 
             return HasValidDigits(digits);
-        }
-
-        public static Cpf Create(string cpf)
-        {
-            if (!IsValid(cpf))
-                throw new ArgumentException("Invalid CPF.");
-
-            return new Cpf(StringUtils.OnlyNumbers(cpf));
         }
 
         private static bool HasRepeatedDigits(string digits)
@@ -51,7 +37,5 @@ namespace LFC.BuildingBlocks.Core.ValueObjects
 
             return $"{firstDigit}{secondDigit}" == digits.Substring(Length - 2, 2);
         }
-
-        public override string ToString() => Number;
     }
 }

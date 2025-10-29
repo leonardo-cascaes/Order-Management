@@ -11,5 +11,10 @@
             Id = Guid.NewGuid();
             CreatedAt = DateTime.UtcNow;
         }
+
+        public void MarkAsUpdated()
+        {
+            UpdatedAt = DateTime.UtcNow;
+        }
     }
 }

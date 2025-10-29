@@ -1,6 +1,6 @@
-﻿using LFC.BuildingBlocks.Core.ValueObjects;
+﻿using LFC.Shared.Core.ValueObjects;
 
-namespace LFC.BuildingBlocks.Core.Services
+namespace LFC.Shared.Core.Services
 {
     public static class DocumentValidationService
     {

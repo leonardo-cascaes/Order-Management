@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Building Blocks\LFC.BuildingBlocks.Core\LFC.BuildingBlocks.Core.csproj" />
+    <ProjectReference Include="..\..\Shared\LFC.Shared.Core\LFC.Shared.Core.csproj" />
   </ItemGroup>
 
 </Project>

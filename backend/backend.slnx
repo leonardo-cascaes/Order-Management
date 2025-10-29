@@ -1,9 +1,5 @@
 <Solution>
   <Folder Name="/src/" />
-  <Folder Name="/src/Building Blocks/" />
-  <Folder Name="/src/Building Blocks/Core/">
-    <Project Path="src/Building Blocks/LFC.BuildingBlocks.Core/LFC.BuildingBlocks.Core.csproj" />
-  </Folder>
   <Folder Name="/src/Services/" />
   <Folder Name="/src/Services/OrderManagement/">
     <Project Path="src/Services/LFC.OrderManagement.API/LFC.OrderManagement.API.csproj" />
@@ -11,5 +7,13 @@
     <Project Path="src/Services/LFC.OrderManagement.Domain/LFC.OrderManagement.Domain.csproj" />
     <Project Path="src/Services/LFC.OrderManagement.Infrastructure/LFC.OrderManagement.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/src/Shared/" />
+  <Folder Name="/src/Shared/Core/">
+    <Project Path="src/Shared/LFC.Shared.Core/LFC.Shared.Core.csproj" />
+  </Folder>
   <Folder Name="/tests/" />
+  <Folder Name="/tests/Services/" />
+  <Folder Name="/tests/Services/OrderManagement/">
+    <Project Path="tests/Services/LFC.OrderManagement.Domain.Tests/LFC.OrderManagement.Domain.Tests.csproj" />
+  </Folder>
 </Solution>

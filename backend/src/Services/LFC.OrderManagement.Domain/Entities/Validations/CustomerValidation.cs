@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using LFC.BuildingBlocks.Core.Services;
-using LFC.BuildingBlocks.Core.ValueObjects;
 using LFC.OrderManagement.Domain.Entities.Enums;
+using LFC.Shared.Core.Services;
+using LFC.Shared.Core.ValueObjects;
 
 namespace LFC.OrderManagement.Domain.Entities.Validations
 {

@@ -1,12 +1,12 @@
-﻿namespace LFC.BuildingBlocks.Core.Common
+﻿namespace LFC.Shared.Core.Common
 {
     public class DigitVerifier
     {
         private string _number;
-        private const int Modulo = 11;
+        private const int Module = 11;
         private readonly List<int> _multipliers = new() { 2, 3, 4, 5, 6, 7, 8, 9 };
         private readonly Dictionary<int, string> _substitutions = new();
-        private bool _useModuloComplement = true;
+        private bool _useModuleComplement = true;
 
         public DigitVerifier(string number)
         {
@@ -44,8 +44,8 @@
                 if (++m >= _multipliers.Count) m = 0;
             }
 
-            var mod = sum % Modulo;
-            var result = _useModuloComplement ? Modulo - mod : mod;
+            var mod = sum % Module;
+            var result = _useModuleComplement ? Module - mod : mod;
             return _substitutions.ContainsKey(result) ? _substitutions[result] : result.ToString();
         }
     }
