@@ -1,4 +1,4 @@
-﻿namespace LFC.OrderManagement.Domain.Entities
+﻿namespace LFC.Shared.Core.Entities
 {
     public abstract class Entity
     {
