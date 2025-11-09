@@ -18,21 +18,6 @@ namespace LFC.OrderManagement.Domain.Entities
             UnitPrice = unitPrice;
         }
 
-        public void UpdateProduct(Guid newProductId)
-        {
-            ProductId = newProductId;
-        }
-
-        public void UpdateQuantity(int newQuantity)
-        {
-            Quantity = newQuantity;
-        }
-
-        public void UpdateUnitPrice(decimal newUnitPrice)
-        {
-            UnitPrice = newUnitPrice;
-        }
-
         public decimal GetTotal() => Quantity * UnitPrice;
     }
 }

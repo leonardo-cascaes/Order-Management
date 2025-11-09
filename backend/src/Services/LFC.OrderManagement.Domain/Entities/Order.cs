@@ -1,6 +1,8 @@
-﻿namespace LFC.OrderManagement.Domain.Entities
+﻿using LFC.Shared.Core.Entities;
+
+namespace LFC.OrderManagement.Domain.Entities
 {
-    public class Order
+    public class Order : Entity
     {
         private readonly List<OrderItem> _items = new();
 
@@ -14,9 +16,8 @@
             CustomerId = customerId;
         }
 
-        public void AddItem(Guid productId, int quantity, decimal unitPrice)
+        public void AddItem(OrderItem item)
         {
-            var item = new OrderItem(productId, quantity, unitPrice);
             _items.Add(item);
         }
 
