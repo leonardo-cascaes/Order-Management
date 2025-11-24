@@ -9,7 +9,7 @@ namespace LFC.OrderManagement.Domain.Tests.Entities
         {
             // Arrange
             var order = new Order(Guid.NewGuid());
-            var item = new OrderItem(Guid.NewGuid(), 10, 25.00m);
+            var item = new OrderItem(order.Id, Guid.NewGuid(), 10, 25.00m);
 
             // Act
             order.AddItem(item);
@@ -23,7 +23,7 @@ namespace LFC.OrderManagement.Domain.Tests.Entities
         {
             // Arrange
             var order = new Order(Guid.NewGuid());
-            var item = new OrderItem(Guid.NewGuid(), 10, 25.00m);
+            var item = new OrderItem(order.Id, Guid.NewGuid(), 10, 25.00m);
 
             // Act
             order.AddItem(item);
@@ -38,7 +38,7 @@ namespace LFC.OrderManagement.Domain.Tests.Entities
         {
             // Arrange
             var order = new Order(Guid.NewGuid());
-            var item = new OrderItem(Guid.NewGuid(), 10, 25.00m);
+            var item = new OrderItem(order.Id, Guid.NewGuid(), 10, 25.00m);
 
             // Act
             order.AddItem(item);
@@ -53,7 +53,7 @@ namespace LFC.OrderManagement.Domain.Tests.Entities
             // Arrange
             var customerId = Guid.NewGuid();
             var order = new Order(customerId);
-            var item = new OrderItem(Guid.NewGuid(), 10, 25.00m);
+            var item = new OrderItem(order.Id, Guid.NewGuid(), 10, 25.00m);
 
             // Act
             order.AddItem(item);

@@ -11,8 +11,9 @@ namespace LFC.OrderManagement.Domain.Entities
 
         protected OrderItem() { }
 
-        public OrderItem(Guid productId, int quantity, decimal unitPrice)
+        public OrderItem(Guid orderId, Guid productId, int quantity, decimal unitPrice)
         {
+            OrderId = orderId;
             ProductId = productId;
             Quantity = quantity;
             UnitPrice = unitPrice;

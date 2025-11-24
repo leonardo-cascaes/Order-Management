@@ -1,4 +1,14 @@
+using LFC.OrderManagement.Infrastructure.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Load connection string
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Register DbContext
+builder.Services.AddDbContext<OrderManagementDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
